@@ -1,69 +1,181 @@
-html{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+#titulo {
+	color:tomato;
 }
 
-
-body{
-	margin: 0;
-	background-color: #efefef;
+#fondo{
+	background-color: rgba(255,0,0);
+	/*opacity: 0.3;*/
+	height: 200px;
+	background: #f00 url('Perro.jpg') repeat-y center bottom / 100px 100px;
+	background-size: 100px 100px;
 }
 
-header{
-	background-color: #364552;
+/*todos los p que tengan la clase especial se definen asi*/
+p.especial{
+	color:mediumseagreen;
+}
+p.texto{
+	color:slateblue;
+}
+
+/*Todos los p que est[en dentro de un div se definen asi*/
+div p{
+	color: aquamarine;
+}
+
+/*Todas los h2 y h3 que esten dentro de un div se definen asi*/
+div h2, div h3{
+	color:brown;
+}
+
+/*Todo lo que no se haya definido antes se define de esta manera*/
+*{
+	font-size: 24px;
+	/*color:black;*/
+}
+/*hexadecimal
+.color{
+	color: #ff0000;
+}
+RGB
+.color{
+	color:rgb(0,0,0);
+}
+*/
+.color{
+	/*border: 5px red inset;*/
+	/*
+	dotted
+	dashed
+	solid
+	double
+	groove
+	ridge
+	inset
+	outset
+	none
+	hidden*/
+	border-style: solid;
+	border-color: blue;
+	border-radius: 5px;
+	border-width: 2rem;
+}
+
+.margen {
+	background-color: chocolate;
+	margin: 15px; 
+	padding: 30px 15px 5px;
+	border: solid 1px black;
+	height: 100px;
+	width: 50px;
+	overflow: scroll;
+	outline: 1px solid red;
+}
+
+.text{
+	font-family: 'Roboto', sans-serif;
+	text-align: justify;
+	text-decoration: overline;
+	text-shadow: 3px 5px 5px blue;
+	/*      derecha abajo blur color*/
+}
+
+a:link {
+	color:blueviolet;
+}
+
+a:visited{
+	color:gray;
+}
+
+a:hover{
+	color:yellow;
+}
+
+a:active{
+	color:red;
+}
+
+ul {
+	background-color: cyan;
+	list-style-type: georgian;
+	/*padding-left: 0;
+	list-style-position: inside;*/
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse; 
+}
+
+th, td{
+	border:solid 1px #eee;
+	padding-left: 5px;
+}
+
+th{
+	background-color: tomato;
 	color: white;
-	padding: 3rem 2rem;
+	text-align: left;
 }
 
-header h1 {
-	font-size: 4rem;
-	text-align: center;
+tr:nth-child(even){
+	background-color: #eee;
 }
 
-.container {
-	width: 400px;
-	margin: 0 auto;
-}
-
-section article{
-	transition: all 0.3s ease;
-	background-color: #fff;
-	margin: 1rem 0rem;
-	border-radius: 0.5rem;
-	padding: 0.25rem 0;
+tr:hover{
+	background-color: #aaa;
 	cursor: pointer;
 }
 
-section article:hover {
-	box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+span{
+	display: block;
+	/*display: none;
+	visibility: hidden;*/
+	max-width: 300px;
+	background-color: #f00;
 }
 
-section article h2, section article p{
-	margin: 1rem;
+.inline{
+	display: inline;
 }
 
-footer{
-	background-color: #222;
-	padding: 3rem;
-	color: #fff;
+#position{
+	/*position: fixed; se queda fijo moviendo el mouse*/
+	position: sticky;
+	left:20px;
+	top: 25px;
 }
 
-footer section{
+.left{
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+.right{
 	float: right;
 }
 
-footer p {
+.container{
+	height: 200px;
+}
+
+.column{
 	margin: 0;
+	padding: 10px 0px;
+	width: 33.3%;
 }
-
-footer a{
-	transition: color 0.3s ease;
-	color: #fff;
-	text-decoration: none;
+.inline-block{
+	/*links de navegacion*/
+	display: inline-block;
+	height: 55px;
+	background-color: red;
 }
-
-footer a:hover{
-	color: cornflowerblue;
+.center{
+	padding: 50px 0;
+	text-align: center;
+	width: 200px;
+	margin: 0 auto;
+	background-color: aqua;
 }
